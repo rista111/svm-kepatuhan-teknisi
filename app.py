@@ -428,7 +428,7 @@ if menu == "📊 Monitoring":
     # PREDIKSI
     # =============================================================================
 
-    if st.button("🔍 JALANKAN MODEL SVM"):
+    if st.button("🔍 JALANKAN MODEL SVM", use_container_width=True):
 
         pred, violations = predict_from_detail(df_harian)
 
