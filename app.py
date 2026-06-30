@@ -123,7 +123,7 @@ section[data-testid="stSidebar"] {
 </style>
 """
 
-#st.markdown(STYLE, unsafe_allow_html=True)
+st.markdown(STYLE, unsafe_allow_html=True)
 
 # =============================================================================
 # LOAD MODEL & DATA
@@ -288,13 +288,17 @@ def predict(jumlah_tipe, total_pengambilan, enc_teknisi):
 # SIDEBAR
 # =============================================================================
 
-st.sidebar.title("🛠️ Dashboard Kepatuhan Teknisi")
-st.sidebar.write("SIDEBAR BERHASIL")
+with st.sidebar:
 
-menu = st.sidebar.radio(
-    "Menu",
-    ["📊 Monitoring", "📈 Rekap Kepatuhan"]
-)
+    st.title("🛠️ Dashboard Kepatuhan Teknisi")
+
+    menu = st.selectbox(
+        "Menu",
+        [
+            "📊 Monitoring",
+            "📈 Rekap Kepatuhan"
+        ]
+    )
 
 # =============================================================================
 # HALAMAN MONITORING
