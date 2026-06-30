@@ -123,7 +123,7 @@ section[data-testid="stSidebar"] {
 </style>
 """
 
-st.markdown(STYLE, unsafe_allow_html=True)
+#st.markdown(STYLE, unsafe_allow_html=True)
 
 # =============================================================================
 # LOAD MODEL & DATA
