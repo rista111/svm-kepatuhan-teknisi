@@ -288,17 +288,13 @@ def predict(jumlah_tipe, total_pengambilan, enc_teknisi):
 # SIDEBAR
 # =============================================================================
 
-with st.sidebar:
+st.sidebar.title("🛠️ Dashboard Kepatuhan Teknisi")
+st.sidebar.write("SIDEBAR BERHASIL")
 
-    st.title("🛠️ Dashboard Kepatuhan Teknisi")
-
-    menu = st.selectbox(
-        "Menu",
-        [
-            "📊 Monitoring",
-            "📈 Rekap Kepatuhan"
-        ]
-    )
+menu = st.sidebar.radio(
+    "Menu",
+    ["📊 Monitoring", "📈 Rekap Kepatuhan"]
+)
 
 # =============================================================================
 # HALAMAN MONITORING
